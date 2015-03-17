@@ -872,6 +872,10 @@ ul.social-buttons li a:active {
     opacity: 0;
 }
 
+.white {
+color: #FFFFFF;
+}
+
 ::-moz-selection {
     text-shadow: none;
     background: #398bae;

@@ -87,7 +87,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading">Preis<wbr>rechner</h2>
+					<h2 class="section-heading white">Preis<wbr>rechner</h2>
 					<h3 class="section-subheading text-muted" style="color: #fff;">
 						Sie wollen ein Fertighaus aus unserem Protfolio?<br>
 						Berechnen sie hier den voraussichtlichen Preis.
@@ -99,7 +99,7 @@
 				method="POST">
 				<div class="row">
 					<div class="form-group">
-						<label for="preis_stil" class="col-md-4 control-label">Architekturstil</label>
+						<label for="preis_stil" class="col-md-4 control-label white">Architekturstil</label>
 						<div class="col-md-8">
 							<select id="preis_stil" name="preis_stil" class="form-control"
 								value="0">
@@ -114,7 +114,7 @@
 
 				<div class="row">
 					<div class="form-group">
-						<label for="preis_qm" class="col-md-4 control-label ">Fläche
+						<label for="preis_qm" class="col-md-4 control-label white">Fläche
 							in qm²</label>
 						<div class="col-md-8">
 							<input id="preis_qm" type="number" name="preis_qm"
@@ -125,7 +125,7 @@
 
 				<div class="row">
 					<div class="form-group">
-						<label for="preis_stockw" class="col-md-4 control-label ">Stockwerke</label>
+						<label for="preis_stockw" class="col-md-4 control-label white">Stockwerke</label>
 						<div class="col-md-8">
 							<input id="preis_stockw" type="number" name="preis_stockw"
 								class="form-control" value="1" validate required />
@@ -135,19 +135,25 @@
 
 				<div class="row">
 					<div class="form-group">
-						<label for="preis_pool" class="col-md-4 control-label">Pool</label>
+						<label for="preis_pool" class="col-md-4 control-label white">Pool</label>
 						<div class="col-md-8">
-							<input type="checkbox" value="0" name="preis_pool" id="preis_pool"
-								class="" />
+							<select id="preis_pool" name="preis_pool" class="form-control"
+								value="0">
+								<option value="0">Nein</option>
+								<option value="1">Ja</option>
+							</select>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group">
-						<label for="preis_keller" class="col-md-4 control-label">Keller</label>
+						<label for="preis_keller" class="col-md-4 control-label white">Keller</label>
 						<div class="col-md-8">
-							<input type="checkbox" value="0" name="preis_keller" id="preis_keller""
-								class="" />
+							<select id="preis_keller" name="preis_keller" class="form-control"
+								value="0">
+								<option value="0">Nein</option>
+								<option value="1">Ja</option>
+							</select>
 						</div>
 					</div>
 				</div>

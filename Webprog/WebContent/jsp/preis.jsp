@@ -87,7 +87,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading">Ihr Angebot</h2>
+					<h2 class="section-heading white">Ihr Angebot</h2>
 					<h3 class="section-subheading text-muted" style="color: #fff;">
 						Hier sehen sie unser voraussichtliches Angebot für sie.<br>
 						Der Endpreis richtet sich nach Aufwand und gegebenheiten vor Ort.
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<!-- Ergebnis der Preisberechnung -->
-			<%!double[] preiseqm = { 1100.98, 1429.00, 1016.30, 1019.45 };
+<%!double[] preiseqm = { 1100.98, 1429.00, 1016.30, 1019.45 };
 	String[] namenStile = { "Brutalismus", "Minimalismus", "Postmoderne",
 			"Jugendstil" };
 
@@ -140,9 +140,7 @@
 				preis = berechnePreis();
 			%>
 
-			<%=preis%>
-
-			<style type="text/css">
+<style type="text/css">
 .tg {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -180,6 +178,7 @@
 	text-align: center
 }
 </style>
+			<p align="center">
 			<table class="tg">
 				<tr>
 					<th class="tg-s6z2">Feld</th>
@@ -187,29 +186,44 @@
 				</tr>
 				<tr>
 					<td>Stil</td>
-					<td><%= namenStile[stil] %></td>
+					<td><%=namenStile[stil]%></td>
 				</tr>
 				<tr>
 					<td>Fläche</td>
-					<td><%= qm %></td>
+					<td><%=qm%></td>
 				</tr>
 				<tr>
 					<td>Stockwerk(e)</td>
-					<td><%= stockwerke %></td>
+					<td><%=stockwerke%></td>
 				</tr>
 				<tr>
 					<td>Keller</td>
-					<td><% if(keller == 1 ) out.print("ja"); %></td>
+					<td>
+						<%
+							if (keller == 1)
+								out.print("Ja");
+							else
+								out.print("Nein");
+						%>
+					</td>
 				</tr>
 				<tr>
 					<td>Pool</td>
-					<td><% if(pool == 1 ) out.print("ja"); %></td>
+					<td>
+						<%
+							if (pool == 1)
+								out.print("ja");
+							else
+								out.print("Nein");
+						%>
+					</td>
 				</tr>
 				<tr>
 					<td><b>Preis</b></td>
-					<td><%= preis %></td>
+					<td><%=preis%></td>
 				</tr>
 			</table>
+			</p>
 
 			<div class="row">
 				<div class="col-lg-12 text-center">
