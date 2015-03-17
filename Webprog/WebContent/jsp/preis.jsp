@@ -1,6 +1,4 @@
-<%@ page import="java.sql.*" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.util.*" %>
+<%@ page import="web.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 </html>
@@ -107,6 +105,7 @@
 	int stockwerke = 1;
 	int pool = 0;
 	int keller = 0;
+	String email = "";
 
 	double preis = 0.0;
 
@@ -139,8 +138,13 @@
 				stockwerke = Integer.parseInt(request.getParameter("preis_stockw"));
 				pool = Integer.parseInt(request.getParameter("preis_pool"));
 				keller = Integer.parseInt(request.getParameter("preis_keller"));
+				email = request.getParameter("preis_email");
 
 				preis = berechnePreis();
+				
+				//Daten in die Datenbank schreiben
+				Preisanfrage p = new Preisanfrage();
+				p.datenSpeichern(""+stil, ""+qm, ""+stockwerke, ""+keller, ""+pool, email);
 			%>
 
 <style type="text/css">

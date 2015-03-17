@@ -23,8 +23,8 @@
 <link href="../css/agency.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="../font-awesome/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
+<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Kaushan+Script'
@@ -87,7 +87,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading white">Preis<wbr>rechner</h2>
+					<h2 class="section-heading white">
+						Preis
+						<wbr>
+						rechner
+					</h2>
 					<h3 class="section-subheading text-muted" style="color: #fff;">
 						Sie wollen ein Fertighaus aus unserem Protfolio?<br>
 						Berechnen sie hier den voraussichtlichen Preis.
@@ -149,11 +153,21 @@
 					<div class="form-group">
 						<label for="preis_keller" class="col-md-4 control-label white">Keller</label>
 						<div class="col-md-8">
-							<select id="preis_keller" name="preis_keller" class="form-control"
-								value="0">
+							<select id="preis_keller" name="preis_keller"
+								class="form-control" value="0">
 								<option value="0">Nein</option>
 								<option value="1">Ja</option>
 							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+						<label for="preis_email" class="col-md-4 control-label white">Email</label>
+						<div class="col-md-8">
+							<input id="preis_email" type="email" name="preis_email"
+								class="form-control" placeholder="1@1.de" validate required />
 						</div>
 					</div>
 				</div>
