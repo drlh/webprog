@@ -2,6 +2,14 @@
 session_start(); 
 ?> 
 
+<?php
+
+if(isset($_COOKIE["login"])) { 
+   header('Location: secure.php'); 
+   exit; 
+} 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
