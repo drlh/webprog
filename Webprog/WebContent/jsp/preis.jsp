@@ -133,6 +133,7 @@
 	}%>
 
 			<%
+				//
 				stil = Integer.parseInt(request.getParameter("preis_stil"));
 				qm = Double.parseDouble(request.getParameter("preis_qm"));
 				stockwerke = Integer.parseInt(request.getParameter("preis_stockw"));
