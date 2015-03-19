@@ -1,4 +1,4 @@
-<%@ page import="web.*" %>
+<%@ page import="web.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 </html>
@@ -96,41 +96,43 @@
 				</div>
 			</div>
 			<!-- Ergebnis der Preisberechnung -->
-<%!double[] preiseqm = { 1100.98, 1429.00, 1016.30, 1019.45 };
-	String[] namenStile = { "Brutalismus", "Minimalismus", "Postmoderne",
-			"Jugendstil" };
-
-	int stil = -1;
-	double qm = 1.0;
-	int stockwerke = 1;
-	int pool = 0;
-	int keller = 0;
-	String email = "";
-
-	double preis = 0.0;
-
-	public double berechnePreis() {
-
-		double summe = 0.0;
-
-		if (stil >= 0) {
-			summe = preiseqm[stil];
-			if (qm > 1.0)
-				summe *= qm;
-			if (stockwerke > 1)
-				summe *= (double) ((stockwerke * stockwerke) + 1);
-
-			if (pool == 1)
-				summe += 50000.00;
-			if (keller == 1)
-				summe += 35000.00;
-
-			return summe;
-
-		} else {
-			return summe;
-		}
-	}%>
+			<%!
+			  	double[] preiseqm = { 1100.98, 1429.00, 1016.30, 1019.45 };
+				String[] namenStile = { "Brutalismus", "Minimalismus", "Postmoderne",
+						"Jugendstil" };
+			
+				int stil = -1;
+				double qm = 1.0;
+				int stockwerke = 1;
+				int pool = 0;
+				int keller = 0;
+				String email = "";
+			
+				double preis = 0.0;
+			
+				public double berechnePreis() {
+			
+					double summe = 0.0;
+			
+					if (stil >= 0) {
+						summe = preiseqm[stil];
+						if (qm > 1.0)
+							summe *= qm;
+						if (stockwerke > 1)
+							summe *= (double) ((stockwerke * stockwerke) + 1);
+			
+						if (pool == 1)
+							summe += 50000.00;
+						if (keller == 1)
+							summe += 35000.00;
+			
+						return summe;
+			
+					} else {
+						return summe;
+					}
+				}
+			%>
 
 			<%
 				//
@@ -142,13 +144,14 @@
 				email = request.getParameter("preis_email");
 
 				preis = berechnePreis();
-				
+
 				//Daten in die Datenbank schreiben
 				Preisanfrage p = new Preisanfrage();
-				p.datenSpeichern(""+stil, ""+qm, ""+stockwerke, ""+keller, ""+pool, email);
+				p.datenSpeichern("" + stil, "" + qm, "" + stockwerke, "" + keller,
+						"" + pool, email);
 			%>
 
-<style type="text/css">
+			<style type="text/css">
 .tg {
 	border-collapse: collapse;
 	border-spacing: 0;

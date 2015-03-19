@@ -2,12 +2,12 @@
 
 <web-app>
   <servlet>
-    <servlet-name>Refresh</servlet-name>
-    <servlet-class>web.servlet.Refresh</servlet-class>
+    <servlet-name>Besucherzähler</servlet-name>
+    <servlet-class>web.servlet.Besucher</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>Refresh</servlet-name>
+    <servlet-name>Besucherzähler</servlet-name>
     <url-pattern>/counter</url-pattern>
   </servlet-mapping>
 </web-app>  

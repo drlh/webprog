@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 import java.util.*;
  
 // Extend HttpServlet class
-@WebServlet({ "/BesucherZähler", "/counter" })
+//@WebServlet({ "/Besucher", "/counter" })
 public class Refresh extends HttpServlet {
  
   /**
