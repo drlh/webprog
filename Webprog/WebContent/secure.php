@@ -9,7 +9,7 @@ $name =  $_SESSION["email"];
 setcookie("login", $name, time()+3600);
 
 if(!isset($_SESSION["email"])) { 
-   header('Location: service.php'); 
+   header('Location: http://localhost/Webprog/service.php'); 
    exit; 
 } 
 
