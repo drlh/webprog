@@ -1,44 +1,32 @@
 <?php
-// Prüfe, ob Felder leer sind
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['number']) 		||
-   empty($_POST['street'])		||
-   empty($_POST['plz']) 		||
-   empty($_POST['city'])		||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-	echo "Fehlende Werte!";
-	return false;
-   }
-
 //Eingaben in Variablen speichern   
-$name = $_POST['name'];
+$password = $_POST['password'];
 $email = $_POST['email'];
 $number = $_POST['number'];
-$street = $_POST['street'];
-$plz = $_POST['plz'];
-$city = $_POST['city'];
 
 //Datenbankverbindung aufbauen
-$db = mysqli_connect("localhost:3306",
+$db = mysqli_connect("localhost",
+					 "root",
 					 "",
-					 "Ew1x4kWj",
-					 "web334_kunden");
+					 "webprog");
 					 
 if(!$db) {
 	exit("Fehler: ".mysqli_connect_error());
 }
 
 //Daten in Tabelle schreiben
-$query = "INSERT INTO kunden VALUES ('$name', '$email', '$number', '$street', '$plz', '$city')";
-$db = mysqli_query($query);
+$query = "INSERT INTO user VALUES ('$email', '$password', '$number')";
+$ergebnis = mysqli_query($db, $query);
 
-if($db != true) {
-	echo "Speichern nicht erfolgreich!"
+if($ergebnis != true) {
+	echo "Speichern nicht erfolgreich!";
+}
+
+else {
+	header('Location: ../service.html');
 }
 
 //Datenbankverbindung schließen
-$db = mysqli_close();
+mysqli_close($db);
 $query = "";
 ?>
