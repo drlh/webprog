@@ -99,8 +99,8 @@ session_start();
 					<h2>Kontakt:</h2>
 
 					<p>
-						<?php include 'php/telefon.php';?> <br />
-						<?php include 'php/email.php';?>
+						<?php include  'php/telefon.php';?> <br />
+						<?php include  'php/email.php';?>
 					</p>
                 </div>
             </div>
