@@ -15,7 +15,7 @@ $ergebnis = mysql_query($abfrage);
 $row = mysql_fetch_object($ergebnis); 
 if($row->password == $password) { 
     $_SESSION["email"] = $email; 
-    header("Location: ../secure.php");
+    header("Location: http://localhost/Webprog/secure.php");
 } 
 else 
     { 
