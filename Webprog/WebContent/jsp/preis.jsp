@@ -1,4 +1,4 @@
-<%@ page import="web.*"%>
+<%@ page import="web.*"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 </html>
@@ -61,7 +61,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="index.html">AR:chitecture
+				<a class="navbar-brand page-scroll" href="http://localhost/Webprog/index.php">AR:chitecture
 					e.V.</a>
 			</div>
 
@@ -70,10 +70,10 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="hidden"><a href="#page-top"></a></li>
-					<li><a class="page-scroll" href="index.html#categories">Kategorien</a>
+					<li><a class="page-scroll" href="http://localhost/Webprog/index.php#kategorien">Kategorien</a>
 					</li>
-					<li><a class="page-scroll" href="#contact">Service</a></li>
-					<li><a class="page-scroll" href="contact.html">Kontakt</a></li>
+					<li><a class="page-scroll" href="http://localhost/Webprog/service.php">Service</a></li>
+					<li><a class="page-scroll" href="http://localhost/Webprog/contact.php">Kontakt</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

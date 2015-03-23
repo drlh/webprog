@@ -91,7 +91,7 @@ session_start();
 					<p>
 					
 					<h2>Vertreten durch:</h2>
-					<p>Dominic Sepetavc, Jan Reichert & Leo Hellwig<br />
+					<p>Dominic Sepetavc, Jan Reichert & Leo Hellwich<br />
 					Hans-Thoma Straße 52 <br />
 					68163 Mannheim
 					</p>
@@ -99,8 +99,8 @@ session_start();
 					<h2>Kontakt:</h2>
 
 					<p>
-						Telefon: +49 1234/56789 <br />
-						E-Mail: test@web.de
+						<?php include 'php/telefon.php';?> <br />
+						<?php include 'php/email.php';?>
 					</p>
                 </div>
             </div>

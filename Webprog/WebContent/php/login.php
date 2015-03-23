@@ -5,7 +5,7 @@ session_start();
 <?php 
 $verbindung = mysql_connect("localhost", "root" , "") 
 or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
-mysql_select_db("webprog") or die ("Datenbank konnte nicht ausgewählt werden"); 
+mysql_select_db("webprojekt") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $email = $_POST["email"]; 
 $password = $_POST["password"]; 
