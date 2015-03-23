@@ -705,8 +705,9 @@ session_start ();
 	<script src="js/agency.js"></script>
 	<script src="js/filter.js"></script>
 
+	<!-- Servlet Besucherzähler -->
 	<script type="text/javascript">
-		$.getJSON( "http://localhost/Webprog/counter?page=start", function( data ) {
+		$.getJSON( "http://localhost/webservlet/counter?page=start", function( data ) {
 			$( "#counter" ).html( data["besucher"] );
 		});		
 
