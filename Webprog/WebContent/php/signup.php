@@ -8,7 +8,7 @@ $number = $_POST['number'];
 $db = mysqli_connect("localhost",
 					 "root",
 					 "",
-					 "webprog");
+					 "webprojekt");
 					 
 if(!$db) {
 	exit("Fehler: ".mysqli_connect_error());
@@ -23,7 +23,7 @@ if($ergebnis != true) {
 }
 
 else {
-	header('Location: ../service.html');
+	header('Location: ../service.php');
 }
 
 //Datenbankverbindung schließen
