@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import web.servlet.helper.BesucherUtil;
+
 /**
  * Servlet implementation class BucherZähler
  */
@@ -20,12 +22,14 @@ public class Besucher extends HttpServlet {
 	private HttpServletRequest request = null;
 	private HttpServletResponse response = null;
 	private int count = 0;
+	BesucherUtil util;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public Besucher() {
         super();
+        util = new BesucherUtil();
         // TODO Auto-generated constructor stub
     }
 
@@ -51,9 +55,15 @@ public class Besucher extends HttpServlet {
 		String ip = request.getRemoteAddr();
 		
 		
-		
+		// Nur Hochzählen bei Starseitenbesuch
 		if (page.equals("start")) {
-			count++;
+			try {
+				util.insertUser(ip);
+				count = util.selectUserSum();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		}
 		
@@ -76,5 +86,6 @@ public class Besucher extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
 
 }

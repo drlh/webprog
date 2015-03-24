@@ -39,17 +39,23 @@ public class BesucherUtil {
 		}
 	}
 	
-	public String selectUserSum() throws ClassNotFoundException
+	public int selectUserSum() throws ClassNotFoundException
 	{
+		int besucher = 0;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			cn = DriverManager.getConnection("jdbc:mysql://" + host + "/" + db
 					+ "?user=" + user + "&password=" + pw);
 
-			String query = "Select SUM(besucher) FROM besucher;";
+			String query = "Select Count(besucher) AS \'ANZ\' FROM besucher;";
 
-			preparedStatement = cn.prepareStatement(query);
-			preparedStatement.executeUpdate();
+			statement = cn.createStatement();
+			resultSet = statement.executeQuery(query);
+			
+			while (resultSet.next()) {
+				besucher= resultSet.getInt("ANZ");
+				
+			}
 			
 			System.out.println("Daten erfolgreich in die Datenbank geschrieben.");
 
@@ -62,7 +68,7 @@ public class BesucherUtil {
 			close();
 		}
 		
-		return "";
+		return besucher;
 	}
 
 	// Schlieﬂen der Verbindung

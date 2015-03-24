@@ -123,7 +123,7 @@ if(isset($_COOKIE["login"])) {
 			
 			<div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted" style="color: #fff;">Sie sind noch kein Mitglied? <br> <a href="signup.html">Melden Sie sich an!</a></h3>
+                    <h3 class="section-subheading text-muted" style="color: #fff;">Sie sind noch kein Mitglied? <br> <a href="signup.php">Melden Sie sich an!</a></h3>
                 </div>
             </div>
 		</div>
